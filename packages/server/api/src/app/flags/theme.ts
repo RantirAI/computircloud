@@ -153,8 +153,8 @@ export function generateTheme({
 
 export const defaultTheme = generateTheme({
     primaryColor: '#6e41e2',
-    websiteName: 'Activepieces',
-    fullLogoUrl: 'https://cdn.activepieces.com/brand/full-logo.png',
-    favIconUrl: 'https://cdn.activepieces.com/brand/favicon.ico',
-    logoIconUrl: 'https://cdn.activepieces.com/brand/logo.svg',
+    websiteName: 'Computir',
+    fullLogoUrl: ' https://cdn.prod.website-files.com/66fdc9030e6fb1187780ccd8/6707132b606d868d7996af1d_Computir%20logo%20mark%20dark.png',
+    favIconUrl: ' https://cdn.prod.website-files.com/66fdc9030e6fb1187780ccd8/6707132b606d868d7996af1d_Computir%20logo%20mark%20dark.png',
+    logoIconUrl: 'https://cdn.prod.website-files.com/66fdc9030e6fb1187780ccd8/6707132b606d868d7996af1d_Computir%20logo%20mark%20dark.png',
 })
