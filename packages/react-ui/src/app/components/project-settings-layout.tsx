@@ -1,3 +1,4 @@
+import { isNil } from '@activepieces/shared';
 import { t } from 'i18next';
 import {
   Bell,
@@ -9,11 +10,10 @@ import {
 } from 'lucide-react';
 import { Navigate } from 'react-router-dom';
 
+import { authenticationSession } from '../../lib/authentication-session';
+
 import SidebarLayout, { SidebarItem } from '@/app/components/sidebar-layout';
 import { platformHooks } from '@/hooks/platform-hooks';
-import { isNil } from '@activepieces/shared';
-
-import { authenticationSession } from '../../lib/authentication-session';
 
 const iconSize = 20;
 
@@ -43,11 +43,11 @@ const sidebarNavItems = [
     href: '/settings/alerts',
     icon: <Bell size={iconSize} />,
   },
-  {
-    title: t('Git Sync'),
-    href: '/settings/git-sync',
-    icon: <GitBranch size={iconSize} />,
-  },
+  // {
+  //   title: t('Git Sync'),
+  //   href: '/settings/git-sync',
+  //   icon: <GitBranch size={iconSize} />,
+  // },
 ];
 
 interface SettingsLayoutProps {

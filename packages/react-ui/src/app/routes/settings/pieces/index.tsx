@@ -1,7 +1,13 @@
+import { PieceMetadataModelSummary } from '@activepieces/pieces-framework';
+import { ApFlagId, isNil, PieceScope, PieceType } from '@activepieces/shared';
 import { ColumnDef } from '@tanstack/react-table';
 import { t } from 'i18next';
 import { CheckIcon, Trash } from 'lucide-react';
 import { useState } from 'react';
+
+import { TableTitle } from '../../../../components/ui/table-title';
+
+import { ManagePiecesDialog } from './manage-pieces-dialog';
 
 import { ConfirmationDeleteDialog } from '@/components/delete-dialog';
 import { Button } from '@/components/ui/button';
@@ -11,12 +17,6 @@ import { InstallPieceDialog } from '@/features/pieces/components/install-piece-d
 import { PieceIcon } from '@/features/pieces/components/piece-icon';
 import { piecesApi } from '@/features/pieces/lib/pieces-api';
 import { flagsHooks } from '@/hooks/flags-hooks';
-import { PieceMetadataModelSummary } from '@activepieces/pieces-framework';
-import { ApFlagId, isNil, PieceScope, PieceType } from '@activepieces/shared';
-
-import { TableTitle } from '../../../../components/ui/table-title';
-
-import { ManagePiecesDialog } from './manage-pieces-dialog';
 
 const columns: ColumnDef<RowDataWithActions<PieceMetadataModelSummary>>[] = [
   {
@@ -48,15 +48,15 @@ const columns: ColumnDef<RowDataWithActions<PieceMetadataModelSummary>>[] = [
       return <div className="text-left">{row.original.displayName}</div>;
     },
   },
-  {
-    accessorKey: 'packageName',
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title={t('Package Name')} />
-    ),
-    cell: ({ row }) => {
-      return <div className="text-left">{row.original.name}</div>;
-    },
-  },
+  // {
+  //   accessorKey: 'packageName',
+  //   header: ({ column }) => (
+  //     <DataTableColumnHeader column={column} title={t('Package Name')} />
+  //   ),
+  //   cell: ({ row }) => {
+  //     return <div className="text-left">{row.original.name}</div>;
+  //   },
+  // },
   {
     accessorKey: 'version',
     header: ({ column }) => (

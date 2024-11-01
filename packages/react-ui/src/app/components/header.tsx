@@ -1,17 +1,8 @@
+import { ApFlagId, isNil } from '@activepieces/shared';
 import { t } from 'i18next';
 import { LogOut, Shield } from 'lucide-react';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-
-import { ProgressCircularComponent } from '@/components/custom/circular-progress';
-import { Button } from '@/components/ui/button';
-import { UserAvatar } from '@/components/ui/user-avatar';
-import { ProjectSwitcher } from '@/features/projects/components/project-switcher';
-import { InviteUserDialog } from '@/features/team/component/invite-user-dialog';
-import { useShowPlatformAdminDashboard } from '@/hooks/authorization-hooks';
-import { projectHooks } from '@/hooks/project-hooks';
-import { formatUtils } from '@/lib/utils';
-import { ApFlagId, isNil } from '@activepieces/shared';
 
 import { useEmbedding } from '../../components/embed-provider';
 import { Separator } from '../../components/ui/seperator';
@@ -22,6 +13,15 @@ import {
 } from '../../components/ui/tooltip';
 
 import { FlagGuard } from './flag-guard';
+
+import { ProgressCircularComponent } from '@/components/custom/circular-progress';
+import { Button } from '@/components/ui/button';
+import { UserAvatar } from '@/components/ui/user-avatar';
+import { ProjectSwitcher } from '@/features/projects/components/project-switcher';
+import { InviteUserDialog } from '@/features/team/component/invite-user-dialog';
+import { useShowPlatformAdminDashboard } from '@/hooks/authorization-hooks';
+import { projectHooks } from '@/hooks/project-hooks';
+import { formatUtils } from '@/lib/utils';
 
 export const Header = () => {
   const history = useLocation();
@@ -42,7 +42,7 @@ export const Header = () => {
           <div className="grow"></div>
           <div className="flex items-center justify-center gap-4">
             <InviteUserDialog></InviteUserDialog>
-            {showPlatformAdminDashboard && (
+            {/* {showPlatformAdminDashboard && (
               <Link to={isInPlatformAdmin ? '/' : '/platform'}>
                 <Button
                   variant={'outline'}
@@ -63,7 +63,7 @@ export const Header = () => {
                   </span>
                 </Button>
               </Link>
-            )}
+            )} */}
 
             <TaskLimitButton />
             <UserAvatar />

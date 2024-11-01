@@ -1,10 +1,14 @@
 'use client';
 
+import { ApFlagId } from '@activepieces/shared';
 import { useMutation } from '@tanstack/react-query';
 import { t } from 'i18next';
 import { Check, ChevronsUpDown } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+
+import { useNewWindow } from '../../../../components/embed-provider';
+import { flagsHooks } from '../../../../hooks/flags-hooks';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -23,10 +27,6 @@ import {
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { INTERNAL_ERROR_TOAST, toast } from '@/components/ui/use-toast';
 import { cn } from '@/lib/utils';
-import { ApFlagId } from '@activepieces/shared';
-
-import { useNewWindow } from '../../../../components/embed-provider';
-import { flagsHooks } from '../../../../hooks/flags-hooks';
 
 export enum LocalesEnum {
   DUTCH = 'nl',
@@ -146,12 +146,10 @@ export function LanguageSwitcher() {
         </Popover>
         {showCommunity ? (
           <div className="text-sm text-muted-foreground mt-2">
-            {t('Help us translate Activepieces to your language.')}
+            {t('Help us translate Computir Cloud to your language.')}
             <span
               className="text-primary ml-2 cursor-pointer"
-              onClick={() =>
-                openNewIndow('https://www.activepieces.com/docs/about/i18n')
-              }
+              onClick={() => openNewIndow('https://www.computir.ai/support')}
             >
               {t('Learn more')}
             </span>
