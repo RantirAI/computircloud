@@ -5,6 +5,7 @@ import { t } from 'i18next';
 import { CheckIcon, Trash } from 'lucide-react';
 import { useState } from 'react';
 
+import localComputirLogo from '../../../../assets/img/piece/Computir logo mark.svg';
 import { TableTitle } from '../../../../components/ui/table-title';
 
 import { ManagePiecesDialog } from './manage-pieces-dialog';
@@ -17,7 +18,6 @@ import { InstallPieceDialog } from '@/features/pieces/components/install-piece-d
 import { PieceIcon } from '@/features/pieces/components/piece-icon';
 import { piecesApi } from '@/features/pieces/lib/pieces-api';
 import { flagsHooks } from '@/hooks/flags-hooks';
-
 const columns: ColumnDef<RowDataWithActions<PieceMetadataModelSummary>>[] = [
   {
     accessorKey: 'name',
@@ -32,7 +32,7 @@ const columns: ColumnDef<RowDataWithActions<PieceMetadataModelSummary>>[] = [
             size={'md'}
             border={true}
             displayName={row.original.displayName}
-            logoUrl={row.original.logoUrl}
+            logoUrl={localComputirLogo}
             showTooltip={false}
           />
         </div>
