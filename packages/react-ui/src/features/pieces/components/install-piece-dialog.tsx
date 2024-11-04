@@ -1,3 +1,9 @@
+import {
+  AddPieceRequestBody,
+  ApFlagId,
+  PackageType,
+  PieceScope,
+} from '@activepieces/shared';
 import { typeboxResolver } from '@hookform/resolvers/typebox';
 import { Static, Type } from '@sinclair/typebox';
 import { useMutation } from '@tanstack/react-query';
@@ -6,6 +12,8 @@ import { t } from 'i18next';
 import { Plus } from 'lucide-react';
 import { useState } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
+
+import { piecesApi } from '../lib/pieces-api';
 
 import { ApMarkdown } from '@/components/custom/markdown';
 import { Button } from '@/components/ui/button';
@@ -35,14 +43,6 @@ import {
 import { toast } from '@/components/ui/use-toast';
 import { flagsHooks } from '@/hooks/flags-hooks';
 import { api } from '@/lib/api';
-import {
-  AddPieceRequestBody,
-  ApFlagId,
-  PackageType,
-  PieceScope,
-} from '@activepieces/shared';
-
-import { piecesApi } from '../lib/pieces-api';
 
 const FormSchema = Type.Object({
   pieceName: Type.String({
@@ -131,7 +131,7 @@ const InstallPieceDialog = ({
           <DialogDescription>
             <ApMarkdown
               markdown={
-                'Use this to install a [custom piece]("https://www.activepieces.com/docs/developers/building-pieces/create-action") that you (or someone else) created. Once the piece is installed, you can use it in the flow builder.\n\nWarning: Make sure you trust the author as the piece will have access to your flow data and it might not be compatible with the current version of Activepieces.'
+                'Use this to install a [custom piece]("https://www.activepieces.com/docs/developers/building-pieces/create-action") that you (or someone else) created. Once the piece is installed, you can use it in the flow builder.\n\nWarning: Make sure you trust the author as the piece will have access to your flow data and it might not be compatible with the current version of Computir.'
               }
             />
           </DialogDescription>
@@ -152,7 +152,7 @@ const InstallPieceDialog = ({
                     required
                     id="pieceName"
                     type="text"
-                    placeholder="@activepieces/piece-name"
+                    placeholder="@computir/node-name"
                     className="rounded-sm"
                   />
                   <FormMessage />
