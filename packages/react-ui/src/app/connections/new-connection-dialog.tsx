@@ -1,6 +1,10 @@
+import { PieceMetadataModelSummary } from '@activepieces/pieces-framework';
+import { isNil } from '@activepieces/shared';
 import { DialogTrigger } from '@radix-ui/react-dialog';
 import { t } from 'i18next';
 import React, { useState } from 'react';
+
+import { CreateOrEditConnectionDialog } from './create-edit-connection-dialog';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -14,10 +18,6 @@ import {
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { piecesHooks } from '@/features/pieces/lib/pieces-hook';
-import { PieceMetadataModelSummary } from '@activepieces/pieces-framework';
-import { isNil } from '@activepieces/shared';
-
-import { CreateOrEditConnectionDialog } from './create-edit-connection-dialog';
 
 type NewConnectionDialogProps = {
   onConnectionCreated: (res: { name: string; id: string }) => void;
@@ -97,7 +97,8 @@ const NewConnectionDialog = React.memo(
                         src={piece.logoUrl}
                       ></img>
                       <div className="mt-2 text-center text-md">
-                        {piece.displayName}
+                        {/* {piece.displayName} */}
+                        Computir
                       </div>
                     </div>
                   ))}

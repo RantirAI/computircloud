@@ -45,7 +45,8 @@ const columns: ColumnDef<RowDataWithActions<PieceMetadataModelSummary>>[] = [
       <DataTableColumnHeader column={column} title={t('Display Name')} />
     ),
     cell: ({ row }) => {
-      return <div className="text-left">{row.original.displayName}</div>;
+      // return <div className="text-left">{row.original.displayName}</div>;
+      return <div className="text-left">Computir Cloud Platform</div>;
     },
   },
   // {
