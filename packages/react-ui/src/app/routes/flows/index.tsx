@@ -223,6 +223,23 @@ const FlowsPage = () => {
 
   return (
     <div className="flex flex-col gap-4 w-full">
+        <div className="container banner" style={{justifyContent: 'space-between'}}>
+          <div className="content" style={{paddingTop: '2em', paddingBottom: '2em'}}>
+            <div className="header">
+              <h4 className="font-family-inter" style={{fontSize: '10px', fontWeight: '700', letterSpacing: '1.5px', textTransform: 'uppercase'}}>Enterprise AI Agents & Integration Platform</h4>
+              <br/>
+              <h1 className="font-family-instrumentserif" style={{fontSize: '38px'}}>Build AI Workflows, Notes & Agents</h1>
+              <p className="font-family-inter-thin" style={{fontWeight: '200', fontSize: '16px'}}>Discover and create custom nodes & integrations to superpower <br/>your life, business, and creativity with AI.</p>
+              <div className="buttons">
+                <button className="watchButton">Watch how we work</button>
+                <span className="integrationText">Over 240+ Integrations</span>
+              </div>
+            </div>
+          </div>
+          <div className="icons">
+                <img src="https://farreledwin.github.io/images/icon.png"/>
+          </div>
+        </div>
       <div className="mb-4 flex">
         <TableTitle>{t('Flows')}</TableTitle>
         <div className="ml-auto flex flex-row gap-2">

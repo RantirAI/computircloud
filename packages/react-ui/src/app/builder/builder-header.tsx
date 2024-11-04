@@ -131,6 +131,12 @@ export const BuilderHeader = () => {
         {!embedState.hideLogoInBuilder && (
           <div className="absolute absolute w-full h-full left-0 top-0 flex items-center justify-center p-4 pointer-events-none">
             <img
+              style={{marginRight: '1em'}}
+              className="h-8 object-contain"
+              src={"https://farreledwin.github.io/images/writir2024.png"}
+              alt={branding.websiteName}
+            ></img>
+            <img
               className="h-8 object-contain"
               src={branding.logos.fullLogoUrl}
               alt={branding.websiteName}
