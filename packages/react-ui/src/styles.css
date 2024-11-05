@@ -122,3 +122,74 @@
   --selection-border-default: 0px solid #b1b1b7;
   --node-border-default: 0px solid #b1b1b7;
 }
+
+.banner {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  background-color: #1a1a2e;
+  color: #fff;
+}
+
+.icons {
+  /* background-color:#DDDFF0;
+   */
+  background-image: url('https://farreledwin.github.io/images/rectangle.png');
+  opacity: 87%;
+  border-radius: 20px;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../../../assets/fonts/Inter-VariableFont_opszwght.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InterThin';
+  src: url('../../../assets/fonts/Inter-VariableFont_opszwght.ttf');
+  font-weight: thin;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InstrumentSerif';
+  src: url('../../../assets/fonts/InstrumentSerif-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-family-instrumentserif {
+  font-family: 'InstrumentSerif';
+}
+
+.font-family-inter {
+  font-family: 'Inter';
+}
+
+.font-family-inter-thin {
+  font-family: 'InterThin';
+}
+
+.watchButton {
+  background-color: white;
+  color: black;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  width: 179px;
+  margin-right: 2em;
+  margin-top: 1em;
+  font-weight: 600;
+}
+
+.integrationText {
+  font-weight: 600;
+}
+
+
+
